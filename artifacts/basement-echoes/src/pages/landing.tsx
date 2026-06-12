@@ -1,6 +1,5 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import albumCover from "@assets/file_00000000e55c71f5b5b6ea9a7b50afde_1781256092050.png";
 
 export default function Landing() {
   const [, setLocation] = useLocation();
@@ -25,16 +24,6 @@ export default function Landing() {
           Free Release — Stream &amp; Download
         </div>
         <h2 className="text-muted-foreground tracking-widest text-sm mb-8">Author Unknown / Performed by AI-Generated Voices</h2>
-
-        <div className="mx-auto mb-10 w-64 md:w-80 relative group">
-          <img
-            src={albumCover}
-            alt="Basement Echoes — Album Cover"
-            data-testid="img-album-cover"
-            className="w-full h-full object-cover glitch"
-          />
-          <div className="absolute inset-0 border border-primary/20 pointer-events-none"></div>
-        </div>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-12 uppercase tracking-wider">
           Every Room Holds a Memory.<br/>Every Echo Hides the Truth.

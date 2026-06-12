@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { ROOMS } from "@/lib/data";
-import albumCover from "@assets/file_00000000e55c71f5b5b6ea9a7b50afde_1781256092050.png";
 
 export default function Album() {
   return (
@@ -11,10 +10,6 @@ export default function Album() {
 
       <header className="mb-16 text-center border-b border-border pb-12">
         <h2 className="text-primary tracking-widest text-sm mb-4 uppercase">The Complete Archive</h2>
-        <div className="mx-auto mb-8 w-48 md:w-64 relative">
-          <img src={albumCover} alt="Basement Echoes Album Cover" data-testid="img-album-cover-album" className="w-full object-cover" />
-          <div className="absolute inset-0 border border-primary/20 pointer-events-none"></div>
-        </div>
         <h1 className="text-5xl md:text-8xl font-sans font-bold text-white uppercase tracking-tighter glitch mb-6">Basement Echoes</h1>
         <p className="text-muted-foreground uppercase tracking-widest max-w-xl mx-auto">
           Author Unknown<br/>
