@@ -39,11 +39,14 @@ export default function Landing() {
         </button>
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-6 text-sm text-muted-foreground uppercase tracking-widest">
-        <Link href="/album" className="hover:text-white transition-colors" data-testid="link-album">Album</Link>
-        <Link href="/about" className="hover:text-white transition-colors" data-testid="link-about">About</Link>
-        <Link href="/press" className="hover:text-white transition-colors" data-testid="link-press">Press</Link>
-        <Link href="/social" className="hover:text-white transition-colors text-primary" data-testid="link-social">Social</Link>
+      <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-3">
+        <div className="flex justify-center gap-6 text-sm text-muted-foreground uppercase tracking-widest">
+          <Link href="/album" className="hover:text-white transition-colors" data-testid="link-album">Album</Link>
+          <Link href="/about" className="hover:text-white transition-colors" data-testid="link-about">About</Link>
+          <Link href="/press" className="hover:text-white transition-colors" data-testid="link-press">Press</Link>
+          <Link href="/social" className="hover:text-white transition-colors text-primary" data-testid="link-social">Social</Link>
+        </div>
+        <p className="text-xs text-muted-foreground uppercase tracking-widest">Phillys Own J-Roc</p>
       </div>
     </div>
   );
