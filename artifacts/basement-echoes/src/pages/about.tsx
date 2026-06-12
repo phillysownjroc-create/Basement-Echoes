@@ -22,7 +22,7 @@ export default function About() {
 
         <div className="space-y-8">
           <header>
-            <h1 className="text-5xl md:text-7xl font-sans font-bold text-white uppercase tracking-tighter mb-2">J-Mac</h1>
+            <h1 className="text-5xl md:text-7xl font-sans font-bold text-white uppercase tracking-tighter mb-2">J-Roc</h1>
             <h2 className="text-primary uppercase tracking-widest text-sm">Phillys Own</h2>
           </header>
 

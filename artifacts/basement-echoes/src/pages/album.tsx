@@ -12,7 +12,7 @@ export default function Album() {
         <h2 className="text-primary tracking-widest text-sm mb-4 uppercase">The Complete Archive</h2>
         <h1 className="text-5xl md:text-8xl font-sans font-bold text-white uppercase tracking-tighter glitch mb-6">Basement Echoes</h1>
         <p className="text-muted-foreground uppercase tracking-widest max-w-xl mx-auto">
-          Written and Produced by Phillys Own J-Mac<br/>
+          Written and Produced by Phillys Own J-Roc<br/>
           Performed by AI-Generated Voices
         </p>
         
@@ -21,7 +21,7 @@ export default function Album() {
         </div>
         <div className="flex justify-center gap-4 mt-4 flex-wrap">
           <button data-testid="btn-free-download" className="border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Free Download</button>
-          <button data-testid="btn-share-x" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('BASEMENT ECHOES — a free concept album by Phillys Own J-Mac. Every room holds a memory. Every echo hides the truth. ' + window.location.origin)}`,'_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Share on X</button>
+          <button data-testid="btn-share-x" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('BASEMENT ECHOES — a free concept album by Phillys Own J-Roc. Every room holds a memory. Every echo hides the truth. ' + window.location.origin)}`,'_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Share on X</button>
           <button data-testid="btn-share-ig" onClick={() => window.open('https://www.instagram.com/','_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Instagram</button>
         </div>
       </header>
@@ -43,7 +43,7 @@ export default function Album() {
       </div>
 
       <footer className="mt-24 text-center text-xs text-muted-foreground uppercase tracking-widest">
-        <p>© {new Date().getFullYear()} Phillys Own J-Mac. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Phillys Own J-Roc. All rights reserved.</p>
       </footer>
     </div>
   );

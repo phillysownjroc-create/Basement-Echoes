@@ -23,7 +23,7 @@ export default function Landing() {
         <div className="inline-block border border-primary text-primary text-xs tracking-widest uppercase px-4 py-1 mb-6 font-bold">
           Free Release — Stream &amp; Download
         </div>
-        <h2 className="text-muted-foreground tracking-widest text-sm mb-4">Written and Produced by Phillys Own J-Mac / Performed by AI-Generated Voices</h2>
+        <h2 className="text-muted-foreground tracking-widest text-sm mb-4">Written and Produced by Phillys Own J-Roc / Performed by AI-Generated Voices</h2>
         <h1 className="text-6xl md:text-9xl font-sans font-bold text-white mb-6 uppercase tracking-tighter glitch flicker">
           Basement<br/>Echoes
         </h1>

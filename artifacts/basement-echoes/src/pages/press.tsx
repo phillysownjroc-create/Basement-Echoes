@@ -16,7 +16,7 @@ export default function Press() {
         <section>
           <h2 className="text-primary font-sans text-2xl uppercase tracking-wider mb-6 font-bold border-l-4 border-primary pl-4">About the Project</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            "Basement Echoes" is a psychological thriller concept album by Phillys Own J-Mac. The project blends traditional songwriting and production with cutting-edge AI vocal generation to create an unsettling, immersive narrative experience.
+            "Basement Echoes" is a psychological thriller concept album by Phillys Own J-Roc. The project blends traditional songwriting and production with cutting-edge AI vocal generation to create an unsettling, immersive narrative experience.
           </p>
           <p className="text-gray-300 leading-relaxed">
             Presented not as a standard album stream, but as a digital investigation, listeners must navigate an abandoned basement's security feeds to uncover the truth hidden within the 12 tracks.
