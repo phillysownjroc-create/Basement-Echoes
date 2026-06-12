@@ -55,13 +55,13 @@ export default function Press() {
           <div className="space-y-4">
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Management & Press Inquiries</p>
-              <a href="mailto:info@basementechoes.com" className="text-white hover:text-primary transition-colors text-lg">info@basementechoes.com</a>
+              <a href="mailto:Phillysownjroc@gmail.com" data-testid="link-email" className="text-white hover:text-primary transition-colors text-lg">Phillysownjroc@gmail.com</a>
             </div>
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Social</p>
               <div className="flex gap-4">
-                <a href="#" className="text-white hover:text-primary transition-colors uppercase tracking-widest text-sm">Instagram</a>
-                <a href="#" className="text-white hover:text-primary transition-colors uppercase tracking-widest text-sm">Twitter</a>
+                <a href="https://www.instagram.com/Phillysownjroc" target="_blank" rel="noopener noreferrer" data-testid="link-press-ig" className="text-white hover:text-primary transition-colors uppercase tracking-widest text-sm">Instagram</a>
+                <a href="https://x.com/Phillysownjroc" target="_blank" rel="noopener noreferrer" data-testid="link-press-x" className="text-white hover:text-primary transition-colors uppercase tracking-widest text-sm">X / Twitter</a>
               </div>
             </div>
           </div>
