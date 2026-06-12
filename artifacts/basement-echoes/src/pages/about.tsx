@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import jrocLogo from "@assets/file_000000000f64722f9e6a1633aa6ec376_1781256065092.png";
 
 export default function About() {
   return (
@@ -8,16 +9,17 @@ export default function About() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="aspect-[3/4] border border-border bg-card relative overflow-hidden p-4">
-          <div className="w-full h-full bg-black flex items-center justify-center relative">
-            <div className="absolute inset-0 vhs-noise opacity-30 mix-blend-overlay"></div>
-            <div className="absolute top-4 left-4 flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-primary"></div>
-              <span className="text-primary text-[10px] tracking-widest uppercase">REC</span>
-            </div>
-            <span className="text-muted-foreground text-xs uppercase tracking-widest">Artist Photo Not Found</span>
-            <div className="absolute inset-0 border border-primary/20 pointer-events-none"></div>
+        <div className="border border-border bg-black relative overflow-hidden p-6 flex items-center justify-center">
+          <div className="absolute top-3 left-3 flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+            <span className="text-primary text-[10px] tracking-widest uppercase">REC</span>
           </div>
+          <img
+            src={jrocLogo}
+            alt="J-Roc Logo"
+            data-testid="img-jroc-logo"
+            className="w-full max-w-xs object-contain"
+          />
         </div>
 
         <div className="space-y-8">
