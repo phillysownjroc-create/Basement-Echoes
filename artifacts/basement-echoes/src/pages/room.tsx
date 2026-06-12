@@ -173,6 +173,16 @@ export default function Room() {
 
       {/* Share */}
       <div className="mb-12">
+        {room.audio && (
+          <a
+            href={room.audio}
+            download={`${room.title}.mp3`}
+            data-testid="btn-download"
+            className="inline-block mb-6 border border-primary text-primary px-6 py-2 text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-colors"
+          >
+            ↓ Download MP3 — Free
+          </a>
+        )}
         <p className="text-xs text-muted-foreground uppercase tracking-widest mb-4">Share this track</p>
         <div className="flex flex-wrap gap-3">
           <a
