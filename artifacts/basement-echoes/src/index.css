@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --font-sans: 'Oswald', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-display: 'Oswald', sans-serif;
+}
+
+:root {
+  --background: 0 0% 4%; /* #0a0a0a */
+  --foreground: 0 0% 100%;
+  --border: 0 0% 15%;
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 100%;
+  --card-border: 0 0% 15%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 100%;
+  --popover-border: 0 0% 15%;
+  --primary: 0 100% 40%; /* #cc0000 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 279 100% 14%; /* #2d0045 */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 100% 40%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 40%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 0 0% 15%;
+  --ring: 0 100% 40%;
+  --sidebar: 0 0% 4%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-border: 0 0% 15%;
+  --sidebar-primary: 0 100% 40%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 279 100% 14%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-ring: 0 100% 40%;
+
+  --radius: 0rem;
+}
+
+.dark {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 100%;
+  --border: 0 0% 15%;
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 100%;
+  --card-border: 0 0% 15%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 100%;
+  --popover-border: 0 0% 15%;
+  --primary: 0 100% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 279 100% 14%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 100% 40%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 40%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 0 0% 15%;
+  --ring: 0 100% 40%;
+  --sidebar: 0 0% 4%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-border: 0 0% 15%;
+  --sidebar-primary: 0 100% 40%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 279 100% 14%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-ring: 0 100% 40%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-mono antialiased bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-widest uppercase;
+  }
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.2)
+  );
+  background-size: 100% 4px;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.6;
+}
+
+.glitch {
+  animation: glitch-anim 4s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+  5% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); }
+  10% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, -2px); }
+  15% { clip-path: inset(10% 0 60% 0); transform: translate(2px, 2px); }
+  20% { clip-path: inset(30% 0 20% 0); transform: translate(1px, -1px); }
+  25% { clip-path: inset(90% 0 10% 0); transform: translate(-1px, 2px); }
+  30% { clip-path: inset(0% 0 0% 0); transform: translate(0, 0); }
+  100% { clip-path: inset(0% 0 0% 0); transform: translate(0, 0); }
+}
+
+.flicker {
+  animation: flicker-anim 5s infinite;
+}
+
+@keyframes flicker-anim {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 1; }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
+}
+
+.vhs-noise {
+  animation: vhs-noise-anim 0.2s infinite;
+}
+
+@keyframes vhs-noise-anim {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-1px,-1px) }
+  20% { transform: translate(1px,1px) }
+  30% { transform: translate(-2px,2px) }
+  40% { transform: translate(2px,-2px) }
+  50% { transform: translate(-1px,1px) }
+  60% { transform: translate(1px,-1px) }
+  70% { transform: translate(2px,2px) }
+  80% { transform: translate(-2px,-2px) }
+  90% { transform: translate(1px,1px) }
+  100% { transform: translate(0,0) }
+}
