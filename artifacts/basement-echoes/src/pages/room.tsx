@@ -148,10 +148,10 @@ export default function Room() {
                   </div>
                 </>
               ) : (
-                <div className="flex flex-col items-center justify-center py-12 border-2 border-dashed border-destructive/20 text-destructive">
-                  <div className="text-4xl mb-4">⚠</div>
-                  <h3 className="font-sans text-2xl font-bold uppercase tracking-wider mb-2">Recording Corrupted</h3>
-                  <p className="text-sm tracking-widest uppercase text-center max-w-xs">The tape has been destroyed or removed from the archive.</p>
+                <div className="flex flex-col items-center justify-center py-12 border-2 border-dashed border-primary/20 text-primary/60">
+                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse mb-6"></div>
+                  <h3 className="font-sans text-2xl font-bold uppercase tracking-wider mb-2 text-white">Audio Coming Soon</h3>
+                  <p className="text-sm tracking-widest uppercase text-center max-w-xs text-muted-foreground">This recording is free. Upload pending — check back soon.</p>
                 </div>
               )}
             </div>
