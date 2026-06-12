@@ -1,7 +1,7 @@
 import { useParams, Link } from "wouter";
 import { ROOMS } from "@/lib/data";
 import { useCollectibles } from "@/lib/store";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import NotFound from "./not-found";
 
 export default function Room() {
@@ -14,6 +14,7 @@ export default function Room() {
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState("0:00");
   const [showCollectAnim, setShowCollectAnim] = useState(false);
+  const [copied, setCopied] = useState(false);
   
   const audioRef = useRef<HTMLAudioElement>(null);
   
@@ -71,6 +72,34 @@ export default function Room() {
       setTimeout(() => setShowCollectAnim(false), 2000);
     }
   };
+
+  const shareUrl = `${window.location.origin}/room/${room.id}`;
+  const shareText = `I just entered Room ${room.id} — "${room.title}" on the Basement Echoes investigation by @Phillysownjroc. Every room holds a memory. Every echo hides the truth.`;
+
+  const shareLinks = [
+    {
+      id: "x",
+      label: "X",
+      url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText + '\n' + shareUrl)}`,
+    },
+    {
+      id: "facebook",
+      label: "Facebook",
+      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+    },
+    {
+      id: "tiktok",
+      label: "TikTok",
+      url: `https://www.tiktok.com/`,
+    },
+  ];
+
+  const copyLink = useCallback(() => {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, [shareUrl]);
 
   return (
     <div className="min-h-screen p-6 md:p-12 relative overflow-hidden">
@@ -212,6 +241,33 @@ export default function Room() {
                 ) : (
                   <span className="text-xs text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Click to search room</span>
                 )}
+              </div>
+            </div>
+            {/* Share */}
+            <div className="border border-border bg-card p-6">
+              <h3 className="text-muted-foreground uppercase tracking-widest border-b border-border pb-2 mb-4 text-sm">Spread The Signal</h3>
+              <div className="space-y-2">
+                {shareLinks.map((s) => (
+                  <a
+                    key={s.id}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`btn-share-${s.id}`}
+                    className="flex items-center justify-between w-full px-4 py-3 border border-border hover:border-primary hover:bg-primary/5 transition-all duration-200 group"
+                  >
+                    <span className="text-xs uppercase tracking-widest text-muted-foreground group-hover:text-white transition-colors font-bold">{s.label}</span>
+                    <span className="text-primary text-xs tracking-widest">Share</span>
+                  </a>
+                ))}
+                <button
+                  onClick={copyLink}
+                  data-testid="btn-copy-link"
+                  className="flex items-center justify-between w-full px-4 py-3 border border-border hover:border-primary hover:bg-primary/5 transition-all duration-200 group"
+                >
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground group-hover:text-white transition-colors font-bold">Copy Link</span>
+                  <span className={`text-xs tracking-widest transition-colors ${copied ? 'text-green-400' : 'text-primary'}`}>{copied ? 'Copied' : 'Instagram / TikTok'}</span>
+                </button>
               </div>
             </div>
           </div>
