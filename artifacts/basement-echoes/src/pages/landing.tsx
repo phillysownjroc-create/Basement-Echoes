@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { useState } from "react";
 
 export default function Landing() {
@@ -9,43 +9,38 @@ export default function Landing() {
     setTransitioning(true);
     setTimeout(() => {
       setLocation("/rooms");
-    }, 1500);
+    }, 800);
   };
 
   return (
-    <div className={`min-h-screen w-full flex flex-col items-center justify-center p-6 ${transitioning ? 'glitch opacity-0 transition-opacity duration-1000' : ''}`}>
-      <div className="absolute top-4 right-4 flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
-        <span className="text-primary text-sm tracking-widest uppercase">REC</span>
-      </div>
+    <div className={`min-h-screen w-full flex flex-col items-center justify-center p-6 transition-opacity duration-700 ${transitioning ? 'opacity-0' : 'opacity-100'}`}>
+      <div className="text-center max-w-2xl z-10">
+        <p className="text-muted-foreground tracking-widest text-xs mb-6 uppercase">A Free Album Release</p>
 
-      <div className="text-center max-w-4xl z-10">
-        <div className="inline-block border border-primary text-primary text-xs tracking-widest uppercase px-4 py-1 mb-6 font-bold">
-          Free Release — Stream &amp; Download
-        </div>
-        <h2 className="text-muted-foreground tracking-widest text-sm mb-8">Author Unknown / Performed by AI-Generated Voices</h2>
+        <h1 className="text-6xl md:text-9xl font-sans font-bold text-white mb-4 uppercase tracking-tighter">
+          Basement<br />Echoes
+        </h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 mb-12 uppercase tracking-wider">
-          Every Room Holds a Memory.<br/>Every Echo Hides the Truth.
+        <p className="text-sm text-muted-foreground uppercase tracking-widest mb-2">Author Unknown</p>
+        <p className="text-sm text-muted-foreground uppercase tracking-widest mb-10">Performed by AI-Generated Voices</p>
+
+        <p className="text-lg md:text-xl text-gray-400 mb-12 leading-relaxed">
+          12 tracks. Written for anyone who has felt lost,<br />
+          unheard, or alone in their own mind.
         </p>
 
-        <button 
+        <button
           onClick={handleEnter}
-          data-testid="btn-enter"
-          className="group relative px-8 py-4 bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 uppercase tracking-widest font-bold text-xl overflow-hidden"
+          data-testid="btn-listen"
+          className="px-10 py-4 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest font-bold text-lg"
         >
-          <span className="relative z-10">Enter The Basement</span>
-          <div className="absolute inset-0 bg-primary/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+          Listen Free
         </button>
       </div>
 
-      <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-3">
-        <div className="flex justify-center gap-6 text-sm text-muted-foreground uppercase tracking-widest">
-          <Link href="/album" className="hover:text-white transition-colors" data-testid="link-album">Album</Link>
-          <Link href="/about" className="hover:text-white transition-colors" data-testid="link-about">About</Link>
-          <Link href="/press" className="hover:text-white transition-colors" data-testid="link-press">Press</Link>
-          <Link href="/social" className="hover:text-white transition-colors text-primary" data-testid="link-social">Social</Link>
-        </div>
+      <div className="absolute bottom-6 left-0 right-0 text-center text-xs text-muted-foreground uppercase tracking-widest space-y-1">
+        <p>Every room holds a memory. Every echo hides the truth.</p>
+        <p className="text-primary/60">Free. No account. No cost.</p>
       </div>
     </div>
   );
