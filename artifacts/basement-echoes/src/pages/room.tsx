@@ -88,6 +88,16 @@ export default function Room() {
     }
   }, [shareUrl, shareText, room.title]);
 
+  const shareInstagram = useCallback(() => {
+    if (navigator.share) {
+      navigator.share({ title: room.title, text: shareText, url: shareUrl });
+    } else {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        window.open("https://www.instagram.com/", "_blank");
+      });
+    }
+  }, [shareUrl, shareText, room.title]);
+
   return (
     <div className="min-h-screen p-6 md:p-12 max-w-2xl mx-auto pt-16">
       {/* Back nav */}
@@ -187,6 +197,13 @@ export default function Room() {
             className="border border-border px-5 py-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white hover:border-white transition-colors"
           >
             TikTok
+          </button>
+          <button
+            onClick={shareInstagram}
+            data-testid="btn-share-instagram"
+            className="border border-border px-5 py-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white hover:border-white transition-colors"
+          >
+            Instagram
           </button>
           <button
             onClick={copyLink}
