@@ -24,7 +24,7 @@ export default function Landing() {
         <div className="inline-block border border-primary text-primary text-xs tracking-widest uppercase px-4 py-1 mb-6 font-bold">
           Free Release — Stream &amp; Download
         </div>
-        <h2 className="text-muted-foreground tracking-widest text-sm mb-8">Written and Produced by Phillys Own J-Roc / Performed by AI-Generated Voices</h2>
+        <h2 className="text-muted-foreground tracking-widest text-sm mb-8">Author Unknown / Performed by AI-Generated Voices</h2>
 
         <div className="mx-auto mb-10 w-64 md:w-80 relative group">
           <img

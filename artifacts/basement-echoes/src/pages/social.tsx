@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import jrocLogo from "@assets/file_000000000f64722f9e6a1633aa6ec376_1781256065092.png";
 
 const HANDLE = "Phillysownjroc";
 
@@ -49,15 +48,12 @@ export default function Social() {
       </div>
 
       <header className="mb-16 text-center">
-        <div className="mx-auto mb-8 w-32 relative">
-          <img src={jrocLogo} alt="J-Roc Logo" className="w-full object-contain" />
-        </div>
         <h2 className="text-primary tracking-widest text-sm mb-3 uppercase">Find The Signal</h2>
         <h1 className="text-5xl md:text-7xl font-sans font-bold text-white uppercase tracking-tighter mb-4">
           Social
         </h1>
         <p className="text-muted-foreground uppercase tracking-widest text-sm">
-          Follow Phillys Own J-Roc across all platforms
+          Follow the investigation across all platforms
         </p>
       </header>
 
@@ -87,7 +83,7 @@ export default function Social() {
         <p className="text-xs text-muted-foreground uppercase tracking-widest mb-6">Share The Investigation</p>
         <button
           data-testid="btn-share-tweet"
-          onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(`BASEMENT ECHOES — a free concept album by @${HANDLE}.\nEvery room holds a memory. Every echo hides the truth.\n${window.location.origin}`)}`, '_blank')}
+          onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(`BASEMENT ECHOES — author unknown. 12 rooms. 12 recordings. Every room holds a memory. Every echo hides the truth.\n${window.location.origin}`)}`, '_blank')}
           className="border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 uppercase tracking-widest text-sm font-bold"
         >
           Post on X

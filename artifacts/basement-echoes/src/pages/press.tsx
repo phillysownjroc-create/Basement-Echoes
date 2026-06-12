@@ -16,10 +16,10 @@ export default function Press() {
         <section>
           <h2 className="text-primary font-sans text-2xl uppercase tracking-wider mb-6 font-bold border-l-4 border-primary pl-4">About the Project</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            "Basement Echoes" is a psychological thriller concept album by Phillys Own J-Roc. The project blends traditional songwriting and production with cutting-edge AI vocal generation to create an unsettling, immersive narrative experience.
+            "Basement Echoes" is a psychological thriller concept album by an unknown author. The project blends narrative sound design with AI vocal generation to create an unsettling, immersive experience. No identity has been verified.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            Presented not as a standard album stream, but as a digital investigation, listeners must navigate an abandoned basement's security feeds to uncover the truth hidden within the 12 tracks.
+            Presented not as a standard album stream but as a digital investigation — listeners navigate an abandoned basement's security feeds to uncover the truth hidden within 12 tracks. The tapes were found. The rooms were already open.
           </p>
         </section>
 
@@ -54,7 +54,7 @@ export default function Press() {
           <h2 className="text-secondary-foreground font-sans text-2xl uppercase tracking-wider mb-6 font-bold">Contact</h2>
           <div className="space-y-4">
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Management & Press Inquiries</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Press Inquiries</p>
               <a href="mailto:Phillysownjroc@gmail.com" data-testid="link-email" className="text-white hover:text-primary transition-colors text-lg">Phillysownjroc@gmail.com</a>
             </div>
             <div>

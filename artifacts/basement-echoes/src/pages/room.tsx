@@ -74,7 +74,7 @@ export default function Room() {
   };
 
   const shareUrl = `${window.location.origin}/room/${room.id}`;
-  const shareText = `I just entered Room ${room.id} — "${room.title}" on the Basement Echoes investigation by @Phillysownjroc. Every room holds a memory. Every echo hides the truth.`;
+  const shareText = `I just entered Room ${room.id} — "${room.title}" on the Basement Echoes investigation. Author unknown. Every room holds a memory. Every echo hides the truth.`;
 
   const shareLinks = [
     {
