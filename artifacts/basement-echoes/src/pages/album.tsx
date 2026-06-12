@@ -19,10 +19,10 @@ export default function Album() {
         <div className="inline-block border border-primary text-primary text-xs tracking-widest uppercase px-4 py-1 mt-6 mb-2 font-bold">
           Free Release — No Cost. No Strings.
         </div>
-        <div className="flex justify-center gap-4 mt-4">
-          <button data-testid="btn-spotify" className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Listen on Spotify</button>
-          <button data-testid="btn-apple" className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Apple Music</button>
+        <div className="flex justify-center gap-4 mt-4 flex-wrap">
           <button data-testid="btn-free-download" className="border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Free Download</button>
+          <button data-testid="btn-share-x" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('BASEMENT ECHOES — a free concept album by Phillys Own J-Mac. Every room holds a memory. Every echo hides the truth. ' + window.location.origin)}`,'_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Share on X</button>
+          <button data-testid="btn-share-ig" onClick={() => window.open('https://www.instagram.com/','_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Instagram</button>
         </div>
       </header>
 
