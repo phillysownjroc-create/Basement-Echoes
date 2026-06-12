@@ -54,6 +54,7 @@ export default function Landing() {
         <Link href="/album" className="hover:text-white transition-colors" data-testid="link-album">Album</Link>
         <Link href="/about" className="hover:text-white transition-colors" data-testid="link-about">About</Link>
         <Link href="/press" className="hover:text-white transition-colors" data-testid="link-press">Press</Link>
+        <Link href="/social" className="hover:text-white transition-colors text-primary" data-testid="link-social">Social</Link>
       </div>
     </div>
   );

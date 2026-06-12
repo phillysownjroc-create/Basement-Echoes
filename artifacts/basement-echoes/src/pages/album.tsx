@@ -26,8 +26,8 @@ export default function Album() {
         </div>
         <div className="flex justify-center gap-4 mt-4 flex-wrap">
           <button data-testid="btn-free-download" className="border border-primary bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Free Download</button>
-          <button data-testid="btn-share-x" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('BASEMENT ECHOES — a free concept album by Phillys Own J-Roc. Every room holds a memory. Every echo hides the truth. ' + window.location.origin)}`,'_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Share on X</button>
-          <button data-testid="btn-share-ig" onClick={() => window.open('https://www.instagram.com/','_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Instagram</button>
+          <button data-testid="btn-share-x" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('BASEMENT ECHOES — a free concept album by @Phillysownjroc. Every room holds a memory. Every echo hides the truth. ' + window.location.origin)}`,'_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Share on X</button>
+          <button data-testid="btn-share-ig" onClick={() => window.open('https://www.instagram.com/Phillysownjroc','_blank')} className="border border-border bg-card hover:bg-white hover:text-black transition-colors px-6 py-3 uppercase tracking-widest text-sm font-bold">Instagram</button>
         </div>
       </header>
 

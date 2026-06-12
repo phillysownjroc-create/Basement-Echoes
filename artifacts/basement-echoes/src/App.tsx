@@ -12,6 +12,7 @@ import Collect from "@/pages/collect";
 import Merch from "@/pages/merch";
 import About from "@/pages/about";
 import Press from "@/pages/press";
+import Social from "@/pages/social";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ function Router() {
         <Route path="/merch" component={Merch} />
         <Route path="/about" component={About} />
         <Route path="/press" component={Press} />
+        <Route path="/social" component={Social} />
         <Route component={NotFound} />
       </Switch>
     </div>
