@@ -8,6 +8,8 @@ import audio7 from "@assets/Track_7_Static_People_1781268239939.mp3";
 import audio8 from "@assets/Track_8_—_Interrogation_1781268239965.mp3";
 import audio9 from "@assets/Track_9_—_No_One_Was_Thereind_1781268239987.mp3";
 import audio11 from "@assets/Track_11_—_FEEDBACK_LOOP_1781268239869.mp3";
+import audio10 from "@assets/Track_10_—_The_Empty_Basement_1781268418176.mp3";
+import audio12 from "@assets/Track_12_—_Silence_at_Last_1781268418126.mp3";
 
 export const ROOMS = [
   { id: 1, title: "Shadows in the Basement", audio: audio1, duration: "3:42", collectible: "Torn photograph" },
@@ -19,7 +21,7 @@ export const ROOMS = [
   { id: 7, title: "Static People", audio: audio7, duration: "--:--", collectible: "Broken microphone" },
   { id: 8, title: "Interrogation", audio: audio8, duration: "--:--", collectible: "Handwritten note" },
   { id: 9, title: "No One Was There", audio: audio9, duration: "--:--", collectible: "Burnt match" },
-  { id: 10, title: "The Empty Basement", audio: null, duration: "--:--", collectible: "Missing poster" },
+  { id: 10, title: "The Empty Basement", audio: audio10, duration: "--:--", collectible: "Missing poster" },
   { id: 11, title: "Feedback Loop", audio: audio11, duration: "--:--", collectible: "Camera lens" },
-  { id: 12, title: "Silence at Last", audio: null, duration: "--:--", collectible: "Basement master key" }
+  { id: 12, title: "Silence at Last", audio: audio12, duration: "--:--", collectible: "Basement master key" }
 ];
