@@ -55,7 +55,7 @@ export default function Press() {
           <div className="space-y-4">
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Press Inquiries</p>
-              <a href="mailto:Phillysownjroc@gmail.com" data-testid="link-email" className="text-white hover:text-primary transition-colors text-lg">Phillysownjroc@gmail.com</a>
+              <p className="text-white text-lg tracking-widest uppercase">Contact Via Social</p>
             </div>
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Social</p>

@@ -46,7 +46,6 @@ export default function Landing() {
           <Link href="/press" className="hover:text-white transition-colors" data-testid="link-press">Press</Link>
           <Link href="/social" className="hover:text-white transition-colors text-primary" data-testid="link-social">Social</Link>
         </div>
-        <p className="text-xs text-muted-foreground uppercase tracking-widest">Phillys Own J-Roc</p>
       </div>
     </div>
   );
